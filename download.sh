@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-DOWNLOADS_PATH="downloads"
+# This script downloads the StarcraftII game and the ladder map packs. The map packs are unzipped
+# automatically. This script does not cleanup any of the zip files and will download the files under
+# a different name if executed multiple times.
+
+
+# THe directory to download everything into.
+DOWNLOADS_PATH="./downloads"
 
 
 #
@@ -8,8 +14,8 @@ DOWNLOADS_PATH="downloads"
 #
 GAMES_PATH="${DOWNLOADS_PATH}/game"
 
-#wget -P ${DOWNLOADS_PATH} http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.1.2.60604_2018_05_16.zip
-#unzip -P iagreetotheeula downloads/SC2.4.1.2.60604_2018_05_16.zip -d ${GAMES_PATH}
+wget -P ${DOWNLOADS_PATH} http://blzdistsc2-a.akamaihd.net/Linux/SC2.4.1.2.60604_2018_05_16.zip
+unzip -P iagreetotheeula downloads/SC2.4.1.2.60604_2018_05_16.zip -d ${GAMES_PATH}
 
 
 #
@@ -41,4 +47,3 @@ unzip -P iagreetotheeula ${DOWNLOADS_PATH}/Ladder2018Season1.zip -d ${MAPS_PATH}
 
 wget -P ${DOWNLOADS_PATH} http://blzdistsc2-a.akamaihd.net/MapPacks/Ladder2018Season2_Updated.zip
 unzip -P iagreetotheeula ${DOWNLOADS_PATH}/Ladder2018Season2_Updated.zip -d ${MAPS_PATH}
-
