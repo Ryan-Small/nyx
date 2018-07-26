@@ -1,5 +1,8 @@
 # Virtual Environments
-.venv
+.venv/
 
 # IDEs
-.idea
+.idea/
+
+# Temporary Directories
+downloads/

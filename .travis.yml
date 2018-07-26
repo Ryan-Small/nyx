@@ -1,10 +1,10 @@
 sudo: required
+
 services:
   - docker
 
 script:
-  - docker build --tag myimage .
-  - docker run myimage
+  - docker build --tag nyx .
 
 after_script:
-- docker images
+  - docker images
