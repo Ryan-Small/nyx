@@ -4,7 +4,7 @@ services:
   - docker
 
 script:
-  - docker build --tag nyx .
+  - docker-compose build
 
 after_script:
   - docker images

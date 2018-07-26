@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+    sc2:
+        build: .
+        command: python3 /usr/src/main.py
+        volumes:
+            - ./src/:/usr/src:rw
+            - ./downloads/game/:/usr/games
+            - ./downloads/maps/:/usr/games/StarCraftII/Maps
