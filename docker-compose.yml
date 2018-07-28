@@ -4,7 +4,9 @@ services:
 
     sc2:
         build: .
-        command: python3 /usr/src/main.py
+        command: python3 /usr/src/agent.py
+        environment:
+            - SC2PATH=/usr/games/StarCraftII
         volumes:
             - ./src/:/usr/src:rw
             - ./downloads/game/:/usr/games
