@@ -1,7 +1,7 @@
 FROM python:3.7.0
 
 # Don't buffer stdin, stdout, stderr
-ENV PYTHONBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 
 # Create a directory for the source code.
 RUN mkdir -p /usr/src
